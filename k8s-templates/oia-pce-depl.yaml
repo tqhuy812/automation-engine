@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oia-pce
+  labels:
+    app: oia-pce-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oia-pce-app
+  template:
+    metadata:
+      labels:
+        app: oia-pce-app
+    spec:
+      containers:
+        - name: oia-pce
+          image: tqhuy812/drpy
+          stdin: true
+          tty: true

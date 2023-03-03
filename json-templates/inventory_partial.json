@@ -1,0 +1,72 @@
+{
+  "topology": {
+    "nodes": [
+      {
+        "id": "1830-PSI-M-A1",
+        "vendor": "VENDOR-A",
+        "host": "135.238.196.212",
+        "port": "830",
+        "type": "TRANSPONDER",
+        "username": "admin",
+        "password": "admin"
+      },
+      {
+        "id": "1830-PSI-M-B1",
+        "vendor": "VENDOR-B",
+        "host": "135.238.196.214",
+        "port": "830",
+        "type": "TRANSPONDER",
+        "username": "admin",
+        "password": "admin"
+      },
+      {
+        "id": "1830-PSS-A1",
+        "vendor": "VENDOR-A",
+        "host": "135.238.196.210",
+        "port": "830",
+        "type": "ROADM",
+        "username": "admin",
+        "password": "admin"
+      },
+      {
+        "id": "1830-PSS-B1",
+        "vendor": "VENDOR-A",
+        "host": "135.238.196.213",
+        "port": "830",
+        "type": "ROADM",
+        "username": "admin",
+        "password": "admin"
+      }
+    ],
+    "links": [
+      {
+        "node-a": {
+          "id": "1830-PSI-M-A1",
+          "port-id": "1-17-1",
+          "type": "TRANSPONDER",
+          "port-dir": "TXRX"
+        },
+        "node-z": {
+          "id": "1830-PSS-A1",
+          "port-id": "1-3-10",
+          "type": "ROADM",
+          "port-dir": "TXRX"
+        }
+      },
+      {
+        "node-a": {
+          "id": "1830-PSI-M-B1",
+          "port-id": "1-14-1",
+          "type": "TRANSPONDER",
+          "port-dir": "TXRX"
+        },
+        "node-z": {
+          "id": "1830-PSS-B1",
+          "port-id": "1-3-10",
+          "type": "ROADM",
+          "port-dir": "TXRX"
+        }
+      }
+    ]
+  }
+}

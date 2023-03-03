@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ols-controller
+  labels:
+    app: ols-controller-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ols-controller-app
+  template:
+    metadata:
+      labels:
+        app: ols-controller-app
+    spec:
+      containers:
+        - name: ols-controller
+          image: nginx
+          stdin: true
+          tty: true
