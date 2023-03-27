@@ -13,7 +13,7 @@ import yaml
 BL_ENGINE_IP = os.getenv("BL_ENGINE_IP", "0.0.0.0")
 MINIKUBE_IP = os.getenv("MINIKUBE_IP", "")
 H_SDNC_IP = os.getenv("H_SDNC_IP", "")
-BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 50000))
+BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
 GITHUB_ARGOCD_TOKEN = ""
@@ -79,6 +79,12 @@ def push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_
                 sha=None,
             ),
             InputGitTreeElement(
+                path="ofc-demo/ols-svc.yaml",
+                mode="100644",
+                type="blob",
+                sha=None,
+            ),
+            InputGitTreeElement(
                 path="ofc-demo/oia-pce-svc.yaml",
                 mode="100644",
                 type="blob",
@@ -100,9 +106,9 @@ def push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_
     main_ref.edit(sha=commit.sha)
 
 
-def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml):
+def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml):
     # Create blobs for each file
-    blob1, blob2 = [
+    blob1, blob2, blob3 = [
         deployment_repo.create_git_blob(
             content=controller_deployment_yaml,
             encoding='utf-8',
@@ -111,6 +117,10 @@ def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml):
             content=ols_deployment_yaml,
             encoding='utf-8',
         ),
+        deployment_repo.create_git_blob(
+            content=ols_service_yaml,
+            encoding='utf-8',
+        )
     ]
 
     # Create a new tree with our blobs
@@ -140,6 +150,12 @@ def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml):
                 type="blob",
                 sha=blob2.sha,
             ),
+            InputGitTreeElement(
+                path="ofc-demo/ols-svc.yaml",
+                mode="100644",
+                type="blob",
+                sha=blob3.sha,
+            )
         ],
         base_tree=deployment_repo.get_git_tree(sha='main')
     )
@@ -185,14 +201,14 @@ def transform():
     controller_service_file = deployment_repo.get_contents("ofc-demo/controller-svc.yaml", ref=MASTER_BRANCH)
     controller_service = controller_service_file.decoded_content.decode("utf-8")
     controller_service_yaml = yaml.safe_load_all(controller_service)
-    port = "30181"
-    for svc_port in controller_service_yaml['spec']['ports']:
-        if svc_port['name'] == "gui-sdn":
-            port = svc_port['nodePort']
-    global MINIKUBE_IP
-    if MINIKUBE_IP == "":
-        MINIKUBE_IP = subprocess.run(['minikube', 'ip'], stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
-    print(MINIKUBE_IP + ":" + port)
+    # port = "30181"
+    # for svc_port in controller_service_yaml['spec']['ports']:
+        # if svc_port['name'] == "gui-sdn":
+            # port = svc_port['nodePort']
+    # global MINIKUBE_IP
+    # if MINIKUBE_IP == "":
+        # MINIKUBE_IP = subprocess.run(['minikube', 'ip'], stdout=subprocess.PIPE).stdout.decode('utf-8').strip()
+    # print(MINIKUBE_IP + ":" + port)
     if len(vendor_list) > 1:
         print("Multi vendor network. We need fully disaggregated scenario")
         controller_deployment_file = deployment_repo.get_contents("ofc-demo/controller-depl.yaml", ref=MASTER_BRANCH)
@@ -206,7 +222,7 @@ def transform():
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
                     if container['name'] == "h-sdnc":
-                        container['image'] = "tqhuy812/nssr-controller-ofc2023"
+                        container['image'] = "tqhuy812/nssr-controller-ofc2023:1.0.0"
                         container['name'] = "t-sdnc"
                     containers.append(container)
                 doc['spec']['template']['spec']['containers'] = containers
@@ -224,22 +240,22 @@ def transform():
         print(oia_pce_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
         push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_pce_service_yaml)
-        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, port])
-        thread.start()
+        # thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, port])
+        # thread.start()
     else:
         print("------------------GETTING TAPI SERVICES------------------")
-        response = tapi_get_services(MINIKUBE_IP, port)
-        response = response.json()
-        service_list = response['output']['service']
-        print(service_list)
-        if len(service_list) > 0:
-            print("------------------CLEANING OC DEVICES------------------")
-            for service in service_list:
-                try:
-                    delete_tapi_service(H_SDNC_IP, port, service['uuid'])
-                except requests.exceptions.RequestException and requests.exceptions.HTTPError:
-                    print("Could not delete oc cross connections")
-                print("------------------OC DEVICES CLEANED------------------")
+        #response = tapi_get_services(MINIKUBE_IP, port)
+        #response = response.json()
+        #service_list = response['output']['service']
+        #print(service_list)
+        #if len(service_list) > 0:
+            #print("------------------CLEANING OC DEVICES------------------")
+            #for service in service_list:
+                #try:
+                    #delete_tapi_service(H_SDNC_IP, port, service['uuid'])
+                #except requests.exceptions.RequestException and requests.exceptions.HTTPError:
+                    #print("Could not delete oc cross connections")
+                #print("------------------OC DEVICES CLEANED------------------")
         print("Single vendor network. We need partially disaggregated scenario")
         controller_deployment_file = deployment_repo.get_contents("ofc-demo/controller-depl.yaml", ref=MASTER_BRANCH)
         controller_deployment = controller_deployment_file.decoded_content.decode("utf-8")
@@ -252,7 +268,7 @@ def transform():
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
                     if container['name'] == "t-sdnc":
-                        container['image'] = "tqhuy812/h-sdnc"
+                        container['image'] = "tqhuy812/hsdnc-ofc2023:1.0.0"
                         container['name'] = "h-sdnc"
                     containers.append(container)
                 doc['spec']['template']['spec']['containers'] = containers
@@ -265,10 +281,14 @@ def transform():
             ols_deployment_yaml = list(yaml.safe_load_all(stream))
         ols_deployment_yaml = yaml.dump_all(ols_deployment_yaml, default_flow_style=False)
         print(ols_deployment_yaml)
+        with open("k8s-templates/ols-svc.yaml", "r") as stream:
+            ols_service_yaml = list(yaml.safe_load_all(stream))
+        ols_service_yaml = yaml.dump_all(ols_service_yaml, default_flow_style=False)
+        print(ols_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
-        push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml)
-        thread = Thread(target=recommissioning_partially, args=[node_list, link_list, MINIKUBE_IP, port])
-        thread.start()
+        push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml)
+        # thread = Thread(target=recommissioning_partially, args=[node_list, link_list, MINIKUBE_IP, port])
+        # thread.start()
     return "DONE", 200
 
 
@@ -539,5 +559,5 @@ def start_runner():
 
 
 if __name__ == '__main__':
-    start_runner()
+    # start_runner()
     app.run(host=BL_ENGINE_IP, port=BL_ENGINE_PORT, debug=True, use_reloader=True)

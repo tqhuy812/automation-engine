@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: ols-controller
-          image: nginx
+          image: tqhuy812/ols-ofc2023:1.0.0
           stdin: true
           tty: true
