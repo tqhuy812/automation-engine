@@ -15,7 +15,22 @@ spec:
         app: ols-controller-app
     spec:
       containers:
-        - name: ols-controller
-          image: tqhuy812/ols-ofc2023:1.0.0
-          stdin: true
-          tty: true
+      - image: tqhuy812/ols-ofc2023:1.0.0
+        name: ols-controller
+        stdin: true
+        tty: true
+        env:
+        - name: KAFKA_SUBSCRIBER_IP
+          value: kafka-svc
+        - name: KAFKA_SUBSCRIBER_PORT
+          value: "9092"
+        - name: KAFKA_PUBLISHER_IP
+          value: kafka-svc
+        - name: KAFKA_PUBLISHER_PORT
+          value: "9092"
+        - name: DRPY_IP
+          value: oia-pce-svc
+        - name: DRPY_PORT
+          value: "40000"
+
+#docker run -dit --network=test-sdnc --ip 172.18.0.4 -p 30002:8181 -p 31002:8101 -e KAFKA_SUBSCRIBER_IP=172.18.0.2 -e KAFKA_SUBSCRIBER_PORT=9092 -e KAFKA_PUBLISHER_IP=172.18.0.2 -e KAFKA_PUBLISHER_PORT=9092 -e DRPY_IP=172.18.0.3 -e DRPY_PORT=40000 --name nssr-controller tqhuy812/nssr-controller-ofc2023:1.1

@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: oia-pce
   labels:
     app: oia-pce-app
+  name: oia-pce
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,10 @@ spec:
         app: oia-pce-app
     spec:
       containers:
-        - name: oia-pce
-          image: tqhuy812/drpy
-          stdin: true
-          tty: true
+      - image: tqhuy812/drpy
+        name: oia-pce
+        stdin: true
+        tty: true
+        env:
+        - name: PCE_IP
+          value: "0.0.0.0"

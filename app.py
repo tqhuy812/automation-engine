@@ -11,14 +11,15 @@ import yaml
 # TODO: watch out ips and ports
 
 BL_ENGINE_IP = os.getenv("BL_ENGINE_IP", "0.0.0.0")
-MINIKUBE_IP = os.getenv("MINIKUBE_IP", "")
+MINIKUBE_IP = os.getenv("MINIKUBE_IP", "192.168.49.2")
+CONTROLLER_PORT = int(os.getenv("CONTROLLER_PORT", 30002))
 H_SDNC_IP = os.getenv("H_SDNC_IP", "")
 BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
 GITHUB_ARGOCD_TOKEN = ""
-REPO_TOPOLOGY = "javoerrea/optical-topology"
-REPO_DEPLOYMENT = "javoerrea/optical-control-plane"
+REPO_TOPOLOGY = "tqhuy812/optical-topology"
+REPO_DEPLOYMENT = "tqhuy812/optical-control-plane"
 
 RESTCONF_BASE_URL = ""
 RESTS_BASE_URL = ""
@@ -38,6 +39,8 @@ CODE_SHOULD_BE_201 = 'Http status code should be 201'
 g = Github(GITHUB_ARGOCD_TOKEN)
 topology_repo = g.get_repo(REPO_TOPOLOGY)
 deployment_repo = g.get_repo(REPO_DEPLOYMENT)
+
+OPTICAL_TOPOLOGY_INVENTORY_LOCAL = "/home/massy/optical-topology/inventory.json" #tqhuy
 
 
 def push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_pce_service_yaml):
@@ -198,9 +201,9 @@ def transform():
     print("------------------VENDORS------------------")
     print(vendor_list)
     print("------------------CHECKING DEPLOYMENT CHANGE------------------")
-    controller_service_file = deployment_repo.get_contents("ofc-demo/controller-svc.yaml", ref=MASTER_BRANCH)
-    controller_service = controller_service_file.decoded_content.decode("utf-8")
-    controller_service_yaml = yaml.safe_load_all(controller_service)
+    # controller_service_file = deployment_repo.get_contents("ofc-demo/controller-svc.yaml", ref=MASTER_BRANCH)
+    # controller_service = controller_service_file.decoded_content.decode("utf-8")
+    # controller_service_yaml = yaml.safe_load_all(controller_service)
     # port = "30181"
     # for svc_port in controller_service_yaml['spec']['ports']:
         # if svc_port['name'] == "gui-sdn":
@@ -222,7 +225,7 @@ def transform():
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
                     if container['name'] == "h-sdnc":
-                        container['image'] = "tqhuy812/nssr-controller-ofc2023:1.0.0"
+                        container['image'] = "tqhuy812/nssr-controller-ofc2023:1.1"
                         container['name'] = "t-sdnc"
                     containers.append(container)
                 doc['spec']['template']['spec']['containers'] = containers
@@ -240,8 +243,8 @@ def transform():
         print(oia_pce_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
         push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_pce_service_yaml)
-        # thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, port])
-        # thread.start()
+        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, port])
+        thread.start()
     else:
         print("------------------GETTING TAPI SERVICES------------------")
         #response = tapi_get_services(MINIKUBE_IP, port)
@@ -268,7 +271,7 @@ def transform():
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
                     if container['name'] == "t-sdnc":
-                        container['image'] = "tqhuy812/hsdnc-ofc2023:1.0.0"
+                        container['image'] = "tqhuy812/hsdnc-ofc2023:1.1.0"
                         container['name'] = "h-sdnc"
                     containers.append(container)
                 doc['spec']['template']['spec']['containers'] = containers
@@ -277,16 +280,16 @@ def transform():
         print("------------------NEW CONTROLLER DEPLOYMENT------------------")
         print(controller_deployment_yaml)
         print("------------------NEW OLS DEPLOYMENT------------------")
-        with open("k8s-templates/ols-depl.yaml", "r") as stream:
-            ols_deployment_yaml = list(yaml.safe_load_all(stream))
-        ols_deployment_yaml = yaml.dump_all(ols_deployment_yaml, default_flow_style=False)
-        print(ols_deployment_yaml)
-        with open("k8s-templates/ols-svc.yaml", "r") as stream:
-            ols_service_yaml = list(yaml.safe_load_all(stream))
-        ols_service_yaml = yaml.dump_all(ols_service_yaml, default_flow_style=False)
-        print(ols_service_yaml)
+        # with open("k8s-templates/ols-depl.yaml", "r") as stream:
+        #     ols_deployment_yaml = list(yaml.safe_load_all(stream))
+        # ols_deployment_yaml = yaml.dump_all(ols_deployment_yaml, default_flow_style=False)
+        # print(ols_deployment_yaml)
+        # with open("k8s-templates/ols-svc.yaml", "r") as stream:
+        #     ols_service_yaml = list(yaml.safe_load_all(stream))
+        # ols_service_yaml = yaml.dump_all(ols_service_yaml, default_flow_style=False)
+        # print(ols_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
-        push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml)
+        # push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml)
         # thread = Thread(target=recommissioning_partially, args=[node_list, link_list, MINIKUBE_IP, port])
         # thread.start()
     return "DONE", 200
@@ -305,46 +308,46 @@ def recommissioning_fully(node_list=None, link_list=None, ip="localhost", port="
     node_list = network_inventory_json['topology']['nodes']
     link_list = network_inventory_json['topology']['links']
     '''''
-    RESTCONF_BASE_URL = "http://" + ip + ":" + port + "/restconf"
-    RESTS_BASE_URL = "http://" + ip + ":" + port + "/rests"
-    print("------------------INIT------------------")
-    print("Recommissioning to controller")
-    print("------------------WAITING FOR CONTROLLER------------------")
-    while True:
-        try:
-            response = tapi_get_context_request()
-            if response.status_code == 200:
-                print("Controller is up")
-                break
-        except requests.exceptions.ConnectionError:
-            print("Controller not up")
-        time.sleep(10)
-    time.sleep(20)  # giving time to load all bundles
-    print("------------------COMMISSIONING DEVICES------------------")
-    for node in node_list:
-        if node['type'] == "TRANSPONDER":
-            continue
-        print("------------------NODE " + node['id'] + "------------------")
-        mount_tapi_device(node['id'], node['host'], node['port'])
-        time.sleep(10)
-    print("------------------DONE WITH DEVICES------------------")
-    print("------------------COMMISSIONING LINKS------------------")
-    for link in link_list:
-        if link['node-a']['type'] == "ROADM" and link['node-z']['type'] == "ROADM":
-            connect_rdm_to_rdm_tapi_request(link['node-a']['id'], link['node-a']['port-id'], link['node-a']['port-dir'],
-                                            link['node-z']['id'], link['node-z']['port-id'], link['node-z']['port-dir'])
-            time.sleep(2)
-        else:
-            if link['node-a']['id'] == "1830-PSI-M-A1":
-                connect_xpdr_to_rdm_tapi_request("1830-PSS-A1", "1-17-1", link['node-z']['id'],
-                                                 link['node-z']['port-id'])
-                time.sleep(2)
-            if link['node-a']['id'] == "1830-PSI-M-B1":
-                connect_xpdr_to_rdm_tapi_request("1830-PSS-B1", "1-14-1", link['node-z']['id'],
-                                                 link['node-z']['port-id'])
-                time.sleep(2)
-    print("------------------DONE WITH LINKS------------------")
-    time.sleep(5)
+    # RESTCONF_BASE_URL = "http://" + ip + ":" + port + "/restconf"
+    # RESTS_BASE_URL = "http://" + ip + ":" + port + "/rests"
+    # print("------------------INIT------------------")
+    # print("Recommissioning to controller")
+    # print("------------------WAITING FOR CONTROLLER------------------")
+    # while True:
+    #     try:
+    #         response = tapi_get_context_request()
+    #         if response.status_code == 200:
+    #             print("Controller is up")
+    #             break
+    #     except requests.exceptions.ConnectionError:
+    #         print("Controller not up")
+    #     time.sleep(10)
+    # time.sleep(20)  # giving time to load all bundles
+    # print("------------------COMMISSIONING DEVICES------------------")
+    # for node in node_list:
+    #     if node['type'] == "TRANSPONDER":
+    #         continue
+    #     print("------------------NODE " + node['id'] + "------------------")
+    #     mount_tapi_device(node['id'], node['host'], node['port'])
+    #     time.sleep(10)
+    # print("------------------DONE WITH DEVICES------------------")
+    # print("------------------COMMISSIONING LINKS------------------")
+    # for link in link_list:
+    #     if link['node-a']['type'] == "ROADM" and link['node-z']['type'] == "ROADM":
+    #         connect_rdm_to_rdm_tapi_request(link['node-a']['id'], link['node-a']['port-id'], link['node-a']['port-dir'],
+    #                                         link['node-z']['id'], link['node-z']['port-id'], link['node-z']['port-dir'])
+    #         time.sleep(2)
+    #     else:
+    #         if link['node-a']['id'] == "1830-PSI-M-A1":
+    #             connect_xpdr_to_rdm_tapi_request("1830-PSS-A1", "1-17-1", link['node-z']['id'],
+    #                                              link['node-z']['port-id'])
+    #             time.sleep(2)
+    #         if link['node-a']['id'] == "1830-PSI-M-B1":
+    #             connect_xpdr_to_rdm_tapi_request("1830-PSS-B1", "1-14-1", link['node-z']['id'],
+    #                                              link['node-z']['port-id'])
+    #             time.sleep(2)
+    # print("------------------DONE WITH LINKS------------------")
+    time.sleep(300)
     print("------------------MAPPING PARTIALLY TO FULLY DISAGGREGATED CONTEXT------------------")
     with open("json-templates/tapi_t1_topo.json", "r") as stream:
         tapi_context = json.load(stream)  # TODO: we should send the string format version
@@ -539,6 +542,7 @@ def start_runner():
     def start_loop():
         topology_file = topology_repo.get_contents("inventory.json", ref=MASTER_BRANCH)
         network_inventory = topology_file.decoded_content.decode("utf-8")
+        # network_inventory = json.load(OPTICAL_TOPOLOGY_INVENTORY_LOCAL) #tqhuy
         print(network_inventory)
         print("------------------TOPO. JSON FILE------------------")
         network_inventory_json = json.loads(network_inventory)
