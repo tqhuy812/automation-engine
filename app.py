@@ -284,8 +284,8 @@ def recommissioning_fully(node_list=None, link_list=None, ip="localhost", port="
     node_list = network_inventory_json['topology']['nodes']
     link_list = network_inventory_json['topology']['links']
     '''''
-    # RESTCONF_BASE_URL = "http://" + ip + ":" + port + "/restconf"
-    # RESTS_BASE_URL = "http://" + ip + ":" + port + "/rests"
+    RESTCONF_BASE_URL = "http://" + ip + ":" + port + "/restconf"
+    RESTS_BASE_URL = "http://" + ip + ":" + port + "/rests"
     # print("------------------INIT------------------")
     # print("Recommissioning to controller")
     # print("------------------WAITING FOR CONTROLLER------------------")
