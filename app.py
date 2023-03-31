@@ -17,7 +17,7 @@ H_SDNC_IP = os.getenv("H_SDNC_IP", "")
 BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
-GITHUB_ARGOCD_TOKEN = "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"
+GITHUB_ARGOCD_TOKEN = ""
 REPO_TOPOLOGY = "tqhuy812/optical-topology"
 REPO_DEPLOYMENT = "tqhuy812/optical-control-plane"
 
