@@ -17,7 +17,7 @@ H_SDNC_IP = os.getenv("H_SDNC_IP", "")
 BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
-GITHUB_ARGOCD_TOKEN = ""
+GITHUB_ARGOCD_TOKEN = "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"
 REPO_TOPOLOGY = "tqhuy812/optical-topology"
 REPO_DEPLOYMENT = "tqhuy812/optical-control-plane"
 
@@ -76,23 +76,11 @@ def push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_
                 sha=blob2.sha,
             ),
             InputGitTreeElement(
-                path="ofc-demo/ols-depl.yaml",
-                mode="100644",
-                type="blob",
-                sha=None,
-            ),
-            InputGitTreeElement(
-                path="ofc-demo/ols-svc.yaml",
-                mode="100644",
-                type="blob",
-                sha=None,
-            ),
-            InputGitTreeElement(
                 path="ofc-demo/oia-pce-svc.yaml",
                 mode="100644",
                 type="blob",
                 sha=blob3.sha,
-            ),
+            )
         ],
         base_tree=deployment_repo.get_git_tree(sha='main')
     )
@@ -146,18 +134,6 @@ def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_se
                 mode="100644",
                 type="blob",
                 sha=None,
-            ),
-            InputGitTreeElement(
-                path="ofc-demo/ols-depl.yaml",
-                mode="100644",
-                type="blob",
-                sha=blob2.sha,
-            ),
-            InputGitTreeElement(
-                path="ofc-demo/ols-svc.yaml",
-                mode="100644",
-                type="blob",
-                sha=blob3.sha,
             )
         ],
         base_tree=deployment_repo.get_git_tree(sha='main')
@@ -243,7 +219,7 @@ def transform():
         print(oia_pce_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
         push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_pce_service_yaml)
-        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, port])
+        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, CONTROLLER_PORT])
         thread.start()
     else:
         print("------------------GETTING TAPI SERVICES------------------")
