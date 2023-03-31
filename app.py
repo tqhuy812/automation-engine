@@ -17,7 +17,7 @@ H_SDNC_IP = os.getenv("H_SDNC_IP", "")
 BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
-GITHUB_ARGOCD_TOKEN = "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"
+GITHUB_ARGOCD_TOKEN = ""
 REPO_TOPOLOGY = "tqhuy812/optical-topology"
 REPO_DEPLOYMENT = "tqhuy812/optical-control-plane"
 
@@ -219,7 +219,7 @@ def transform():
         print(oia_pce_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
         push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_pce_service_yaml)
-        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, CONTROLLER_PORT])
+        thread = Thread(target=recommissioning_fully, args=[node_list, link_list, MINIKUBE_IP, str(CONTROLLER_PORT)])
         thread.start()
     else:
         print("------------------GETTING TAPI SERVICES------------------")
@@ -323,7 +323,7 @@ def recommissioning_fully(node_list=None, link_list=None, ip="localhost", port="
     #                                              link['node-z']['port-id'])
     #             time.sleep(2)
     # print("------------------DONE WITH LINKS------------------")
-    time.sleep(300)
+    time.sleep(130)
     print("------------------MAPPING PARTIALLY TO FULLY DISAGGREGATED CONTEXT------------------")
     with open("json-templates/tapi_t1_topo.json", "r") as stream:
         tapi_context = json.load(stream)  # TODO: we should send the string format version
