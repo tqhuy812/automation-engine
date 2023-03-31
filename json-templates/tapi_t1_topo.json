@@ -71,48 +71,6 @@
                     "layer-protocol-qualifier": "tapi-digital-otn:OTU_TYPE_OTU_CN"
                 },
                 {
-                    "uuid": "1b86532b-5063-324e-8c96-c5b3a0c0fa23",
-                    "lower-connection": [
-                        {
-                            "connection-uuid": "9cc827f5-9f04-3382-bd6a-d5fbd513b570"
-                        },
-                        {
-                            "connection-uuid": "410cee51-b7a9-3739-9047-945b4593ee6c"
-                        }
-                    ],
-                    "supported-client-link": [
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "link-uuid": "d85eaac7-01c9-338a-89b8-adcae3e2612b"
-                        }
-                    ],
-                    "operational-state": "ENABLED",
-                    "direction": "BIDIRECTIONAL",
-                    "lifecycle-state": "INSTALLED",
-                    "connection-end-point": [
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "cdbaf93a-8a30-38f8-9c61-d416cde153ad",
-                            "connection-end-point-uuid": "9d86f903-58f8-30d9-a242-78b8a5cd0855"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "416fff82-1fb1-3578-b279-a82e8dfe3ee7",
-                            "connection-end-point-uuid": "b734cee3-775b-323b-b990-419ae1303737"
-                        }
-                    ],
-                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                    "name": [
-                        {
-                            "value-name": "MEDIA_CHANNELTop Connection",
-                            "value": "TOP+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+MEDIA_CHANNEL"
-                        }
-                    ],
-                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
-                },
-                {
                     "uuid": "efe87371-5efb-3119-a1a7-2b8d439ee459",
                     "supported-client-link": [
                         {
@@ -215,6 +173,42 @@
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
                 },
                 {
+                    "uuid": "fc05b7e9-ba07-3460-9d65-38cc0a6da85d",
+                    "lower-connection": [
+                        {
+                            "connection-uuid": "1ff7c88d-0ed1-3996-b95f-56c10b318401"
+                        },
+                        {
+                            "connection-uuid": "d61fc1ab-47e8-33f1-bd07-5f137d8748fc"
+                        }
+                    ],
+                    "operational-state": "ENABLED",
+                    "direction": "BIDIRECTIONAL",
+                    "lifecycle-state": "INSTALLED",
+                    "connection-end-point": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "84cf9692-6b41-369c-bff3-6530a43a398e",
+                            "connection-end-point-uuid": "ebb363b3-7896-3f23-9e3b-3aebc854dbae"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                            "node-edge-point-uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79",
+                            "connection-end-point-uuid": "af60a8b7-2c1e-3062-9703-436a43887175"
+                        }
+                    ],
+                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                    "name": [
+                        {
+                            "value-name": "OTSi_MEDIA_CHANNELTop Connection",
+                            "value": "TOP+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+OTSi_MEDIA_CHANNEL"
+                        }
+                    ],
+                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
+                },
+                {
                     "uuid": "b8955a14-cac9-399d-84b3-ef59b96e5fad",
                     "supported-client-link": [
                         {
@@ -247,40 +241,6 @@
                         }
                     ],
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
-                },
-                {
-                    "uuid": "6e9f1a74-c0d9-380f-a00b-5befa3ea08f6",
-                    "operational-state": "ENABLED",
-                    "direction": "BIDIRECTIONAL",
-                    "lifecycle-state": "INSTALLED",
-                    "connection-end-point": [
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a",
-                            "connection-end-point-uuid": "7453d4a6-f73c-361e-954a-9749948204c3"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "dde45ea6-40e2-34d8-b068-c681c0760f8f",
-                            "connection-end-point-uuid": "0b8c311b-804c-3a27-95bf-3e5395ff6a98"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "9e912bb4-3f30-3997-9dc1-65147f6854c3",
-                            "connection-end-point-uuid": "ad41570d-e913-3100-a49a-6e1e472cc4d8"
-                        }
-                    ],
-                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                    "name": [
-                        {
-                            "value-name": "OTSi_MEDIA_CHANNELCross Connection",
-                            "value": "XC+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-A1+PORT-1-5-4_DEGREE_TX-1-5-4+ROADM_1830-PSS-A1+PORT-1-5-1_DEGREE_RX-1-5-1+OTSi_MEDIA_CHANNEL"
-                        }
-                    ],
-                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                 },
                 {
                     "uuid": "3d4b2ab9-2459-3fc1-81f3-3f3f402d8ab9",
@@ -317,7 +277,7 @@
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
                 },
                 {
-                    "uuid": "410cee51-b7a9-3739-9047-945b4593ee6c",
+                    "uuid": "27755ddc-2d21-3aee-888a-78d3c192f194",
                     "operational-state": "ENABLED",
                     "direction": "BIDIRECTIONAL",
                     "lifecycle-state": "INSTALLED",
@@ -325,27 +285,27 @@
                         {
                             "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                             "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "cdbaf93a-8a30-38f8-9c61-d416cde153ad",
-                            "connection-end-point-uuid": "9d86f903-58f8-30d9-a242-78b8a5cd0855"
+                            "node-edge-point-uuid": "b67d08b8-b639-34ad-b540-badc0b1baccb",
+                            "connection-end-point-uuid": "e5811e32-4c03-3055-815c-7f33d62a3b83"
                         },
                         {
                             "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                             "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
                             "node-edge-point-uuid": "3cf822dd-114d-3d4f-851b-fda477ef59e9",
-                            "connection-end-point-uuid": "2d6784e3-c714-36a5-9f8b-139817457411"
+                            "connection-end-point-uuid": "594da879-9389-3d2f-a20d-dd69afd62164"
                         },
                         {
                             "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                             "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "b67d08b8-b639-34ad-b540-badc0b1baccb",
-                            "connection-end-point-uuid": "adda895e-b949-3f0f-9a6d-9877495cd829"
+                            "node-edge-point-uuid": "cdbaf93a-8a30-38f8-9c61-d416cde153ad",
+                            "connection-end-point-uuid": "84df7396-c99c-3cc9-a18c-ca6eaa099c2b"
                         }
                     ],
                     "layer-protocol-name": "PHOTONIC_MEDIA",
                     "name": [
                         {
                             "value-name": "MEDIA_CHANNELCross Connection",
-                            "value": "XC+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-A1+PORT-1-5-4_DEGREE_TX-1-5-4+ROADM_1830-PSS-A1+PORT-1-5-1_DEGREE_RX-1-5-1+MEDIA_CHANNEL"
+                            "value": "XC+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-A1+PORT-1-5-4_DEGREE_TX-1-5-4+ROADM_1830-PSS-A1+PORT-1-5-1_DEGREE_RX-1-5-1+MEDIA_CHANNEL"
                         }
                     ],
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
@@ -413,35 +373,43 @@
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS"
                 },
                 {
-                    "uuid": "9cc827f5-9f04-3382-bd6a-d5fbd513b570",
+                    "uuid": "17f9020e-7ebb-3b61-9d8e-c2149c43b366",
+                    "lower-connection": [
+                        {
+                            "connection-uuid": "27755ddc-2d21-3aee-888a-78d3c192f194"
+                        },
+                        {
+                            "connection-uuid": "340197c0-e510-346b-9e3f-e148f25352eb"
+                        }
+                    ],
+                    "supported-client-link": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "beb7ef5c-7557-3801-a9b3-d10a1e27d64e"
+                        }
+                    ],
                     "operational-state": "ENABLED",
                     "direction": "BIDIRECTIONAL",
                     "lifecycle-state": "INSTALLED",
                     "connection-end-point": [
                         {
                             "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                            "node-edge-point-uuid": "cdbaf93a-8a30-38f8-9c61-d416cde153ad",
+                            "connection-end-point-uuid": "84df7396-c99c-3cc9-a18c-ca6eaa099c2b"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                             "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
                             "node-edge-point-uuid": "416fff82-1fb1-3578-b279-a82e8dfe3ee7",
-                            "connection-end-point-uuid": "b734cee3-775b-323b-b990-419ae1303737"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "c2d2e10d-3e0f-3eb3-ab8d-ba09a5299f9a",
-                            "connection-end-point-uuid": "01772b43-b4f3-387e-8e52-b15120a8141d"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "7f7df3c5-f490-30ef-941c-b8a4e390e42d",
-                            "connection-end-point-uuid": "c2915e7d-2ea1-338e-86d8-3dce2aabc46b"
+                            "connection-end-point-uuid": "25dbfa16-266a-3c60-a182-af5b80aaae2e"
                         }
                     ],
                     "layer-protocol-name": "PHOTONIC_MEDIA",
                     "name": [
                         {
-                            "value-name": "MEDIA_CHANNELCross Connection",
-                            "value": "XC+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-2-1_DEGREE_RX-1-2-1+ROADM_1830-PSS-B1+PORT-1-2-4_DEGREE_TX-1-2-4+MEDIA_CHANNEL"
+                            "value-name": "MEDIA_CHANNELTop Connection",
+                            "value": "TOP+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+MEDIA_CHANNEL"
                         }
                     ],
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
@@ -507,6 +475,74 @@
                         }
                     ],
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
+                },
+                {
+                    "uuid": "d61fc1ab-47e8-33f1-bd07-5f137d8748fc",
+                    "operational-state": "ENABLED",
+                    "direction": "BIDIRECTIONAL",
+                    "lifecycle-state": "INSTALLED",
+                    "connection-end-point": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                            "node-edge-point-uuid": "ec9812c8-a3e1-32d2-a485-d5f15895a859",
+                            "connection-end-point-uuid": "82ab1a48-aa3f-31ba-af99-02f03d159f28"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                            "node-edge-point-uuid": "de6f7457-2624-30a7-ba51-5a7272b9b9b3",
+                            "connection-end-point-uuid": "03b533fe-0e87-3e30-b37d-d68ce0f0c890"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                            "node-edge-point-uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79",
+                            "connection-end-point-uuid": "af60a8b7-2c1e-3062-9703-436a43887175"
+                        }
+                    ],
+                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                    "name": [
+                        {
+                            "value-name": "OTSi_MEDIA_CHANNELCross Connection",
+                            "value": "XC+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-A1+PORT-1-5-4_DEGREE_TX-1-5-4+ROADM_1830-PSS-A1+PORT-1-5-1_DEGREE_RX-1-5-1+OTSi_MEDIA_CHANNEL"
+                        }
+                    ],
+                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                },
+                {
+                    "uuid": "340197c0-e510-346b-9e3f-e148f25352eb",
+                    "operational-state": "ENABLED",
+                    "direction": "BIDIRECTIONAL",
+                    "lifecycle-state": "INSTALLED",
+                    "connection-end-point": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "7f7df3c5-f490-30ef-941c-b8a4e390e42d",
+                            "connection-end-point-uuid": "c64a0223-5654-3866-9266-d2d87b067c86"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "c2d2e10d-3e0f-3eb3-ab8d-ba09a5299f9a",
+                            "connection-end-point-uuid": "b1c41939-284d-3671-ba0f-0eea4fca6dc1"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "416fff82-1fb1-3578-b279-a82e8dfe3ee7",
+                            "connection-end-point-uuid": "25dbfa16-266a-3c60-a182-af5b80aaae2e"
+                        }
+                    ],
+                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                    "name": [
+                        {
+                            "value-name": "MEDIA_CHANNELCross Connection",
+                            "value": "XC+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-2-1_DEGREE_RX-1-2-1+ROADM_1830-PSS-B1+PORT-1-2-4_DEGREE_TX-1-2-4+MEDIA_CHANNEL"
+                        }
+                    ],
+                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
                 },
                 {
                     "uuid": "88e562f6-7d65-34b1-80de-9844eccb0342",
@@ -599,6 +635,40 @@
                     "layer-protocol-qualifier": "tapi-digital-otn:ODU_TYPE"
                 },
                 {
+                    "uuid": "1ff7c88d-0ed1-3996-b95f-56c10b318401",
+                    "operational-state": "ENABLED",
+                    "direction": "BIDIRECTIONAL",
+                    "lifecycle-state": "INSTALLED",
+                    "connection-end-point": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "84cf9692-6b41-369c-bff3-6530a43a398e",
+                            "connection-end-point-uuid": "ebb363b3-7896-3f23-9e3b-3aebc854dbae"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "50ea0356-4000-3bd2-9d09-2b9432aba493",
+                            "connection-end-point-uuid": "9065e0ef-0584-35de-90c7-2d7d6e4548c5"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                            "node-edge-point-uuid": "de368326-c8e4-3560-9519-0f0081088b81",
+                            "connection-end-point-uuid": "497f03de-3c40-3dfd-bed2-c13260a44108"
+                        }
+                    ],
+                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                    "name": [
+                        {
+                            "value-name": "OTSi_MEDIA_CHANNELCross Connection",
+                            "value": "XC+b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-2-1_DEGREE_RX-1-2-1+ROADM_1830-PSS-B1+PORT-1-2-4_DEGREE_TX-1-2-4+OTSi_MEDIA_CHANNEL"
+                        }
+                    ],
+                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                },
+                {
                     "uuid": "1e97267c-b13c-3f59-9b89-ff23c7f8cb97",
                     "operational-state": "ENABLED",
                     "direction": "UNIDIRECTIONAL",
@@ -687,76 +757,6 @@
                         }
                     ],
                     "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
-                },
-                {
-                    "uuid": "aad586ab-d976-3cbb-a207-d5107f1fc4ec",
-                    "operational-state": "ENABLED",
-                    "direction": "BIDIRECTIONAL",
-                    "lifecycle-state": "INSTALLED",
-                    "connection-end-point": [
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "a6b7cb94-26f5-3f12-b5be-213ebccb1b27",
-                            "connection-end-point-uuid": "7ceb2f4b-3976-35d9-96c9-6f56cd84c388"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862",
-                            "connection-end-point-uuid": "5222d36b-71d3-3d07-834d-d26b0007be2d"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "4774cb93-b847-3334-8ae9-194de3d54728",
-                            "connection-end-point-uuid": "fd325ab7-b48e-3f8b-bd02-f1fbf4b4a973"
-                        }
-                    ],
-                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                    "name": [
-                        {
-                            "value-name": "OTSi_MEDIA_CHANNELCross Connection",
-                            "value": "XC+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-2-1_DEGREE_RX-1-2-1+ROADM_1830-PSS-B1+PORT-1-2-4_DEGREE_TX-1-2-4+OTSi_MEDIA_CHANNEL"
-                        }
-                    ],
-                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
-                },
-                {
-                    "uuid": "bad8e2f4-b8c5-3049-9da6-4eaf08e18bea",
-                    "lower-connection": [
-                        {
-                            "connection-uuid": "aad586ab-d976-3cbb-a207-d5107f1fc4ec"
-                        },
-                        {
-                            "connection-uuid": "6e9f1a74-c0d9-380f-a00b-5befa3ea08f6"
-                        }
-                    ],
-                    "operational-state": "ENABLED",
-                    "direction": "BIDIRECTIONAL",
-                    "lifecycle-state": "INSTALLED",
-                    "connection-end-point": [
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                            "node-edge-point-uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a",
-                            "connection-end-point-uuid": "7453d4a6-f73c-361e-954a-9749948204c3"
-                        },
-                        {
-                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                            "node-edge-point-uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862",
-                            "connection-end-point-uuid": "5222d36b-71d3-3d07-834d-d26b0007be2d"
-                        }
-                    ],
-                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                    "name": [
-                        {
-                            "value-name": "OTSi_MEDIA_CHANNELTop Connection",
-                            "value": "TOP+4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+PORT-1-3-10_ADDDROP-1-3-10+ROADM_1830-PSS-B1+PORT-1-3-10_ADDDROP-1-3-10+OTSi_MEDIA_CHANNEL"
-                        }
-                    ],
-                    "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
                 },
                 {
                     "uuid": "a8060def-bc8e-3cf6-910d-b5990bd66d30",
@@ -859,7 +859,7 @@
             ],
             "connectivity-service": [
                 {
-                    "uuid": "bb1b9050-b7a1-11ed-afa1-0242ac120002",
+                    "uuid": "b3bd8070-b7a1-11ed-afa1-0242ac120002",
                     "operational-state": "ENABLED",
                     "direction": "BIDIRECTIONAL",
                     "lifecycle-state": "INSTALLED",
@@ -905,88 +905,7 @@
                     "name": [
                         {
                             "value-name": "Connectivity service name",
-                            "value": "bb1b9050-b7a1-11ed-afa1-0242ac120002"
-                        }
-                    ],
-                    "routing-constraint": {
-                        "is-exclusive": true
-                    },
-                    "administrative-state": "UNLOCKED",
-                    "connectivity-constraint": {
-                        "requested-capacity": {
-                            "total-size": {
-                                "unit": "tapi-common:CAPACITY_UNIT_GB",
-                                "value": "100.0"
-                            }
-                        },
-                        "service-type": "POINT_TO_POINT_CONNECTIVITY",
-                        "service-level": "Some service-level",
-                        "connection-inclusion": [
-                            {
-                                "connection-uuid": "ebe0694d-7241-399b-80d1-bdc82b3fdc90"
-                            }
-                        ]
-                    },
-                    "connection": [
-                        {
-                            "connection-uuid": "ebe0694d-7241-399b-80d1-bdc82b3fdc90"
-                        },
-                        {
-                            "connection-uuid": "4bf95554-cb15-303f-8247-69f51c5cd497"
-                        },
-                        {
-                            "connection-uuid": "8b3b0e4f-d976-3b9f-a81f-cc185741af5f"
-                        }
-                    ]
-                },
-                {
-                    "uuid": "4a38610c-b3ae-11ed-afa1-0242ac120002",
-                    "operational-state": "ENABLED",
-                    "direction": "BIDIRECTIONAL",
-                    "lifecycle-state": "INSTALLED",
-                    "end-point": [
-                        {
-                            "local-id": "OT_1830-PSS-A1_CARD-1-17",
-                            "operational-state": "ENABLED",
-                            "direction": "BIDIRECTIONAL",
-                            "role": "SYMMETRIC",
-                            "protection-role": "WORK",
-                            "service-interface-point": {
-                                "service-interface-point-uuid": "930fc8fa-40e3-327a-b29e-1c3babd96665"
-                            },
-                            "layer-protocol-name": "PHOTONIC_MEDIA",
-                            "name": [
-                                {
-                                    "value-name": "OpenConfig node id",
-                                    "value": "OT_1830-PSS-A1_CARD-1-17"
-                                }
-                            ],
-                            "administrative-state": "UNLOCKED"
-                        },
-                        {
-                            "local-id": "OT_1830-PSS-B1_CARD-1-14",
-                            "operational-state": "ENABLED",
-                            "direction": "BIDIRECTIONAL",
-                            "role": "SYMMETRIC",
-                            "protection-role": "WORK",
-                            "service-interface-point": {
-                                "service-interface-point-uuid": "964a31c0-f27e-3add-b9ad-0f300f179774"
-                            },
-                            "layer-protocol-name": "PHOTONIC_MEDIA",
-                            "name": [
-                                {
-                                    "value-name": "OpnConfig node id",
-                                    "value": "OT_1830-PSS-B1_CARD-1-14"
-                                }
-                            ],
-                            "administrative-state": "UNLOCKED"
-                        }
-                    ],
-                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                    "name": [
-                        {
-                            "value-name": "Connectivity service name",
-                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002"
+                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002"
                         }
                     ],
                     "routing-constraint": {
@@ -1005,16 +924,22 @@
                     },
                     "connection": [
                         {
+                            "connection-uuid": "4bf95554-cb15-303f-8247-69f51c5cd497"
+                        },
+                        {
+                            "connection-uuid": "fc05b7e9-ba07-3460-9d65-38cc0a6da85d"
+                        },
+                        {
+                            "connection-uuid": "17f9020e-7ebb-3b61-9d8e-c2149c43b366"
+                        },
+                        {
+                            "connection-uuid": "8b3b0e4f-d976-3b9f-a81f-cc185741af5f"
+                        },
+                        {
                             "connection-uuid": "ebe0694d-7241-399b-80d1-bdc82b3fdc90"
                         },
                         {
-                            "connection-uuid": "bad8e2f4-b8c5-3049-9da6-4eaf08e18bea"
-                        },
-                        {
                             "connection-uuid": "a55f6175-f510-39cd-a392-4aba7c352a44"
-                        },
-                        {
-                            "connection-uuid": "1b86532b-5063-324e-8c96-c5b3a0c0fa23"
                         }
                     ]
                 }
@@ -1029,37 +954,95 @@
         "tapi-path-computation:path-computation-context": {
             "path": [
                 {
-                    "uuid": "32903aa6-cd53-3253-85a3-bc4b44c6e0ef",
-                    "direction": "BIDIRECTIONAL",
-                    "name": [
-                        {
-                            "value-name": "Path name",
-                            "value": "path+path_comp_service+bb1b9050-b7a1-11ed-afa1-0242ac120002"
-                        }
-                    ],
+                    "uuid": "bba5adcb-0337-3f1e-9e8e-9d90baf78430",
+                    "direction": "UNIDIRECTIONAL",
                     "link": [
                         {
                             "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                            "link-uuid": "d4c5f986-3b45-3228-8b41-f6b5ce120766"
+                            "link-uuid": "f2883a57-cb0d-348b-8374-b9176d17f0be"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "1127013d-66b0-381f-b8e3-3d290e6eac78"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "330bff43-4c24-32f9-8a8f-e58939d50eb8"
                         }
                     ],
-                    "layer-protocol-name": "DSR"
+                    "name": [
+                        {
+                            "value-name": "Z-A Path name",
+                            "value": "path_z_a+path_comp_service+b3bd8070-b7a1-11ed-afa1-0242ac120002"
+                        }
+                    ],
+                    "tapi-photonic-media:photonic-media-path-spec": {
+                        "photonic-media-path-pac": {
+                            "selected-otsi-output-power": "0.1",
+                            "selected-central-frequency": "191318750",
+                            "selected-operational-mode": "1",
+                            "selected-spectrum": {
+                                "upper-frequency": "191337500",
+                                "lower-frequency": "191300000"
+                            }
+                        }
+                    },
+                    "layer-protocol-name": "PHOTONIC_MEDIA"
+                },
+                {
+                    "uuid": "e0cdc2e2-3066-398b-bbfe-d40d90dd4b0a",
+                    "direction": "UNIDIRECTIONAL",
+                    "link": [
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "f2883a57-cb0d-348b-8374-b9176d17f0be"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "330bff43-4c24-32f9-8a8f-e58939d50eb8"
+                        },
+                        {
+                            "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                            "link-uuid": "077f9fd2-de35-3427-b582-b0a6ccc6f603"
+                        }
+                    ],
+                    "name": [
+                        {
+                            "value-name": "A-Z Path name",
+                            "value": "path_a_z+path_comp_service+b3bd8070-b7a1-11ed-afa1-0242ac120002"
+                        }
+                    ],
+                    "tapi-photonic-media:photonic-media-path-spec": {
+                        "photonic-media-path-pac": {
+                            "selected-otsi-output-power": "0.1",
+                            "selected-central-frequency": "191318750",
+                            "selected-operational-mode": "1",
+                            "selected-spectrum": {
+                                "upper-frequency": "191337500",
+                                "lower-frequency": "191300000"
+                            }
+                        }
+                    },
+                    "layer-protocol-name": "PHOTONIC_MEDIA"
                 }
             ],
             "path-comp-service": [
                 {
-                    "uuid": "f7de9d80-5bb3-382a-8135-12495d3f649a",
-                    "direction": "BIDIRECTIONAL",
+                    "uuid": "ccf1b50d-3fc2-36d5-a630-afd7aed907d5",
+                    "direction": "UNIDIRECTIONAL",
                     "path": [
                         {
-                            "path-uuid": "32903aa6-cd53-3253-85a3-bc4b44c6e0ef"
+                            "path-uuid": "bba5adcb-0337-3f1e-9e8e-9d90baf78430"
+                        },
+                        {
+                            "path-uuid": "e0cdc2e2-3066-398b-bbfe-d40d90dd4b0a"
                         }
                     ],
                     "end-point": [
                         {
                             "local-id": "OT_1830-PSS-B1_CARD-1-14",
                             "direction": "BIDIRECTIONAL",
-                            "layer-protocol-qualifier": "tapi-dsr:DIGITAL_SIGNAL_TYPE_100_GigE",
+                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
                             "role": "SYMMETRIC",
                             "capacity": {
                                 "total-size": {
@@ -1068,7 +1051,7 @@
                                 }
                             },
                             "service-interface-point": {
-                                "service-interface-point-uuid": "71b49efc-7f8b-3a01-b17f-797184f19126"
+                                "service-interface-point-uuid": "964a31c0-f27e-3add-b9ad-0f300f179774"
                             },
                             "name": [
                                 {
@@ -1076,12 +1059,12 @@
                                     "value": "OT_1830-PSS-B1_CARD-1-14"
                                 }
                             ],
-                            "layer-protocol-name": "DSR"
+                            "layer-protocol-name": "PHOTONIC_MEDIA"
                         },
                         {
                             "local-id": "OT_1830-PSS-A1_CARD-1-17",
                             "direction": "BIDIRECTIONAL",
-                            "layer-protocol-qualifier": "tapi-dsr:DIGITAL_SIGNAL_TYPE_100_GigE",
+                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
                             "role": "SYMMETRIC",
                             "capacity": {
                                 "total-size": {
@@ -1090,7 +1073,7 @@
                                 }
                             },
                             "service-interface-point": {
-                                "service-interface-point-uuid": "64ed59aa-5f14-3632-8238-f375418b2362"
+                                "service-interface-point-uuid": "930fc8fa-40e3-327a-b29e-1c3babd96665"
                             },
                             "name": [
                                 {
@@ -1098,36 +1081,16 @@
                                     "value": "OT_1830-PSS-A1_CARD-1-17"
                                 }
                             ],
-                            "layer-protocol-name": "DSR"
+                            "layer-protocol-name": "PHOTONIC_MEDIA"
                         }
                     ],
                     "name": [
                         {
                             "value-name": "Path Computation Service name",
-                            "value": "path_comp_service+bb1b9050-b7a1-11ed-afa1-0242ac120002"
+                            "value": "path_comp_service+b3bd8070-b7a1-11ed-afa1-0242ac120002"
                         }
                     ],
-                    "topology-constraint": [
-                        {
-                            "local-id": "Path Computation Topology Constraint",
-                            "preferred-transport-layer": "DSR",
-                            "constraint-weight": "0",
-                            "name": [
-                                {
-                                    "value-name": "Topology Constraint",
-                                    "value": "Path Computation Topology Constraint"
-                                }
-                            ],
-                            "include-link": [
-                                {
-                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                    "link-uuid": "d4c5f986-3b45-3228-8b41-f6b5ce120766"
-                                }
-                            ],
-                            "explicit-route": false
-                        }
-                    ],
-                    "layer-protocol-name": "DSR",
+                    "layer-protocol-name": "PHOTONIC_MEDIA",
                     "routing-constraint": {
                         "is-exclusive": true
                     }
@@ -7767,119 +7730,6 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
-                                    "uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "7453d4a6-f73c-361e-954a-9749948204c3",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
                                     "uuid": "63d172a5-d731-3dcf-aab0-9523841a707c",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "mapped-service-interface-point": [
@@ -8071,6 +7921,119 @@
                                     "supported-cep-layer-protocol-qualifier-instances": [
                                         {
                                             "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
+                                    "uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "af60a8b7-2c1e-3062-9703-436a43887175",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                                         }
                                     ],
                                     "operational-state": "ENABLED",
@@ -8523,14 +8486,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "adda895e-b949-3f0f-9a6d-9877495cd829",
+                                                "uuid": "e5811e32-4c03-3055-815c-7f33d62a3b83",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                                                        "node-edge-point-uuid": "dde45ea6-40e2-34d8-b068-c681c0760f8f"
+                                                        "node-edge-point-uuid": "de6f7457-2624-30a7-ba51-5a7272b9b9b3"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -8567,7 +8530,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -8643,6 +8606,119 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
+                                    "uuid": "ec9812c8-a3e1-32d2-a485-d5f15895a859",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "82ab1a48-aa3f-31ba-af99-02f03d159f28",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "ec9812c8-a3e1-32d2-a485-d5f15895a859",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
                                     "uuid": "cdbaf93a-8a30-38f8-9c61-d416cde153ad",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "tapi-photonic-media:photonic-media-node-edge-point-spec": {
@@ -8690,14 +8766,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "9d86f903-58f8-30d9-a242-78b8a5cd0855",
+                                                "uuid": "84df7396-c99c-3cc9-a18c-ca6eaa099c2b",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                                                        "node-edge-point-uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a"
+                                                        "node-edge-point-uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -8734,7 +8810,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -9454,119 +9530,6 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
-                                    "uuid": "dde45ea6-40e2-34d8-b068-c681c0760f8f",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "0b8c311b-804c-3a27-95bf-3e5395ff6a98",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "dde45ea6-40e2-34d8-b068-c681c0760f8f",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
                                     "uuid": "d9937156-65c8-3717-a150-efa1528338a5",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "mapped-service-interface-point": [
@@ -9958,6 +9921,119 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
+                                    "uuid": "de6f7457-2624-30a7-ba51-5a7272b9b9b3",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "03b533fe-0e87-3e30-b37d-d68ce0f0c890",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "de6f7457-2624-30a7-ba51-5a7272b9b9b3",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-4_DEGREE_TX-1-5-4"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
                                     "uuid": "eeebbb99-331d-3ae8-93ef-fedb704f7d95",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "tapi-photonic-media:photonic-media-node-edge-point-spec": {
@@ -10083,14 +10159,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "2d6784e3-c714-36a5-9f8b-139817457411",
+                                                "uuid": "594da879-9389-3d2f-a20d-dd69afd62164",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                                                        "node-edge-point-uuid": "9e912bb4-3f30-3997-9dc1-65147f6854c3"
+                                                        "node-edge-point-uuid": "ec9812c8-a3e1-32d2-a485-d5f15895a859"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -10127,7 +10203,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -11419,119 +11495,6 @@
                                     "supported-cep-layer-protocol-qualifier-instances": [
                                         {
                                             "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
-                                    "uuid": "9e912bb4-3f30-3997-9dc1-65147f6854c3",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "ad41570d-e913-3100-a49a-6e1e472cc4d8",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "9e912bb4-3f30-3997-9dc1-65147f6854c3",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-5-1_DEGREE_RX-1-5-1"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                                         }
                                     ],
                                     "operational-state": "ENABLED",
@@ -19635,119 +19598,6 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
-                                    "uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "5222d36b-71d3-3d07-834d-d26b0007be2d",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
                                     "uuid": "920ef3f6-30e9-3c4d-8144-596f4245f683",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "tapi-photonic-media:photonic-media-node-edge-point-spec": {
@@ -20261,14 +20111,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "01772b43-b4f3-387e-8e52-b15120a8141d",
+                                                "uuid": "b1c41939-284d-3671-ba0f-0eea4fca6dc1",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                                                        "node-edge-point-uuid": "4774cb93-b847-3334-8ae9-194de3d54728"
+                                                        "node-edge-point-uuid": "de368326-c8e4-3560-9519-0f0081088b81"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -20305,7 +20155,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -20320,119 +20170,6 @@
                                     "supported-cep-layer-protocol-qualifier-instances": [
                                         {
                                             "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
-                                    "uuid": "a6b7cb94-26f5-3f12-b5be-213ebccb1b27",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "7ceb2f4b-3976-35d9-96c9-6f56cd84c388",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "a6b7cb94-26f5-3f12-b5be-213ebccb1b27",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                                         }
                                     ],
                                     "operational-state": "ENABLED",
@@ -20487,14 +20224,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "b734cee3-775b-323b-b990-419ae1303737",
+                                                "uuid": "25dbfa16-266a-3c60-a182-af5b80aaae2e",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                                                        "node-edge-point-uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862"
+                                                        "node-edge-point-uuid": "84cf9692-6b41-369c-bff3-6530a43a398e"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -20531,7 +20268,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -20811,14 +20548,14 @@
                                     "tapi-connectivity:cep-list": {
                                         "connection-end-point": [
                                             {
-                                                "uuid": "c2915e7d-2ea1-338e-86d8-3dce2aabc46b",
+                                                "uuid": "c64a0223-5654-3866-9266-d2d87b067c86",
                                                 "operational-state": "ENABLED",
                                                 "direction": "BIDIRECTIONAL",
                                                 "client-node-edge-point": [
                                                     {
                                                         "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
                                                         "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                                                        "node-edge-point-uuid": "a6b7cb94-26f5-3f12-b5be-213ebccb1b27"
+                                                        "node-edge-point-uuid": "50ea0356-4000-3bd2-9d09-2b9432aba493"
                                                     }
                                                 ],
                                                 "connection-port-role": "SYMMETRIC",
@@ -20855,7 +20592,7 @@
                                                 "name": [
                                                     {
                                                         "value-name": "MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
                                                     }
                                                 ],
                                                 "parent-node-edge-point": {
@@ -20996,6 +20733,119 @@
                                     "supported-cep-layer-protocol-qualifier-instances": [
                                         {
                                             "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTS"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
+                                    "uuid": "84cf9692-6b41-369c-bff3-6530a43a398e",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "ebb363b3-7896-3f23-9e3b-3aebc854dbae",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "84cf9692-6b41-369c-bff3-6530a43a398e",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                                         }
                                     ],
                                     "operational-state": "ENABLED",
@@ -21371,6 +21221,232 @@
                                     "lifecycle-state": "INSTALLED"
                                 },
                                 {
+                                    "uuid": "50ea0356-4000-3bd2-9d09-2b9432aba493",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "9065e0ef-0584-35de-90c7-2d7d6e4548c5",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "50ea0356-4000-3bd2-9d09-2b9432aba493",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-4_DEGREE_TX-1-2-4"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
+                                    "uuid": "de368326-c8e4-3560-9519-0f0081088b81",
+                                    "layer-protocol-name": "PHOTONIC_MEDIA",
+                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
+                                        "spectrum-capability-pac": {
+                                            "supportable-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "occupied-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191300000",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ],
+                                            "available-spectrum": [
+                                                {
+                                                    "upper-frequency": "191337500",
+                                                    "lower-frequency": "191337500",
+                                                    "frequency-constraint": {
+                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
+                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "link-port-role": "SYMMETRIC",
+                                    "name": [
+                                        {
+                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
+                                            "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
+                                        }
+                                    ],
+                                    "direction": "BIDIRECTIONAL",
+                                    "tapi-connectivity:cep-list": {
+                                        "connection-end-point": [
+                                            {
+                                                "uuid": "497f03de-3c40-3dfd-bed2-c13260a44108",
+                                                "operational-state": "ENABLED",
+                                                "direction": "BIDIRECTIONAL",
+                                                "connection-port-role": "SYMMETRIC",
+                                                "lifecycle-state": "INSTALLED",
+                                                "layer-protocol-name": "PHOTONIC_MEDIA",
+                                                "name": [
+                                                    {
+                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
+                                                        "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
+                                                    }
+                                                ],
+                                                "parent-node-edge-point": {
+                                                    "node-edge-point-uuid": "de368326-c8e4-3560-9519-0f0081088b81",
+                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
+                                                },
+                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
+                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
+                                                    "flexi-grid-pac": {
+                                                        "m": "0",
+                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
+                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
+                                                        "n": "0",
+                                                        "local-id": "Local Id",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "SpectrumPac Name",
+                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "otsi-termination-pac": {
+                                                        "selected-central-frequency": "191318750",
+                                                        "selected-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        }
+                                                    },
+                                                    "spectrum-pac": {
+                                                        "occupied-spectrum": {
+                                                            "upper-frequency": "191337500",
+                                                            "lower-frequency": "191300000"
+                                                        },
+                                                        "local-id": "SpectrumPac",
+                                                        "name": [
+                                                            {
+                                                                "value-name": "OTSiMediaChannelSpec Name",
+                                                                "value": "OTSiMediaChannelSpecName"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "supported-cep-layer-protocol-qualifier-instances": [
+                                        {
+                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
+                                        }
+                                    ],
+                                    "operational-state": "ENABLED",
+                                    "administrative-state": "UNLOCKED",
+                                    "lifecycle-state": "INSTALLED"
+                                },
+                                {
                                     "uuid": "6b64eb93-5b61-3a83-8505-b04a958f22cf",
                                     "layer-protocol-name": "PHOTONIC_MEDIA",
                                     "mapped-service-interface-point": [
@@ -21701,119 +21777,6 @@
                                     "supported-cep-layer-protocol-qualifier-instances": [
                                         {
                                             "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_MC"
-                                        }
-                                    ],
-                                    "operational-state": "ENABLED",
-                                    "administrative-state": "UNLOCKED",
-                                    "lifecycle-state": "INSTALLED"
-                                },
-                                {
-                                    "uuid": "4774cb93-b847-3334-8ae9-194de3d54728",
-                                    "layer-protocol-name": "PHOTONIC_MEDIA",
-                                    "tapi-photonic-media:photonic-media-node-edge-point-spec": {
-                                        "spectrum-capability-pac": {
-                                            "supportable-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "occupied-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191300000",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ],
-                                            "available-spectrum": [
-                                                {
-                                                    "upper-frequency": "191337500",
-                                                    "lower-frequency": "191337500",
-                                                    "frequency-constraint": {
-                                                        "adjustment-granularity": "tapi-photonic-media:ADJUSTMENT_GRANULARITY_G_6_25GHZ",
-                                                        "grid-type": "tapi-photonic-media:GRID_TYPE_FLEX"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "link-port-role": "SYMMETRIC",
-                                    "name": [
-                                        {
-                                            "value-name": "OTSi_MEDIA_CHANNELNodeEdgePoint",
-                                            "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
-                                        }
-                                    ],
-                                    "direction": "BIDIRECTIONAL",
-                                    "tapi-connectivity:cep-list": {
-                                        "connection-end-point": [
-                                            {
-                                                "uuid": "fd325ab7-b48e-3f8b-bd02-f1fbf4b4a973",
-                                                "operational-state": "ENABLED",
-                                                "direction": "BIDIRECTIONAL",
-                                                "connection-port-role": "SYMMETRIC",
-                                                "lifecycle-state": "INSTALLED",
-                                                "layer-protocol-name": "PHOTONIC_MEDIA",
-                                                "name": [
-                                                    {
-                                                        "value-name": "OTSi_MEDIA_CHANNELConnectionEndPoint",
-                                                        "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
-                                                    }
-                                                ],
-                                                "parent-node-edge-point": {
-                                                    "node-edge-point-uuid": "4774cb93-b847-3334-8ae9-194de3d54728",
-                                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a"
-                                                },
-                                                "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC",
-                                                "tapi-photonic-media:otsi-mc-connection-end-point-spec": {
-                                                    "flexi-grid-pac": {
-                                                        "m": "0",
-                                                        "flexi-ch-spc-type": "tapi-photonic-media:FLEXI_CHANNEL_SPACING_6_25GHz",
-                                                        "flexi-slot-width-granularity": "tapi-photonic-media:FLEXI_SLOT_WIDTH_GRANULARITY_12_5GHz",
-                                                        "n": "0",
-                                                        "local-id": "Local Id",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "SpectrumPac Name",
-                                                                "value": "SpectrumPac+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-2-1_DEGREE_RX-1-2-1"
-                                                            }
-                                                        ]
-                                                    },
-                                                    "otsi-termination-pac": {
-                                                        "selected-central-frequency": "191318750",
-                                                        "selected-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        }
-                                                    },
-                                                    "spectrum-pac": {
-                                                        "occupied-spectrum": {
-                                                            "upper-frequency": "191337500",
-                                                            "lower-frequency": "191300000"
-                                                        },
-                                                        "local-id": "SpectrumPac",
-                                                        "name": [
-                                                            {
-                                                                "value-name": "OTSiMediaChannelSpec Name",
-                                                                "value": "OTSiMediaChannelSpecName"
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "supported-cep-layer-protocol-qualifier-instances": [
-                                        {
-                                            "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSiMC"
                                         }
                                     ],
                                     "operational-state": "ENABLED",
@@ -23882,6 +23845,93 @@
                     ],
                     "link": [
                         {
+                            "uuid": "beb7ef5c-7557-3801-a9b3-d10a1e27d64e",
+                            "risk-characteristic": [
+                                {
+                                    "risk-characteristic-name": "risk characteristic",
+                                    "risk-identifier-list": [
+                                        "risk identifier1",
+                                        "risk identifier2"
+                                    ]
+                                }
+                            ],
+                            "node-edge-point": [
+                                {
+                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
+                                    "node-edge-point-uuid": "84cf9692-6b41-369c-bff3-6530a43a398e"
+                                },
+                                {
+                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
+                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
+                                    "node-edge-point-uuid": "81e14efa-5c43-31c5-8c7d-a0f10ee75d79"
+                                }
+                            ],
+                            "resilience-type": {
+                                "restoration-policy": "NA",
+                                "protection-type": "NO_PROTECTION"
+                            },
+                            "delivery-order-characteristic": "delivery order",
+                            "name": [
+                                {
+                                    "value-name": "tapi-otsi-mc-rdm-rdm-linklink name",
+                                    "value": "b3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10tob3bd8070-b7a1-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
+                                }
+                            ],
+                            "unavailable-time-characteristic": "unavailable time",
+                            "lifecycle-state": "INSTALLED",
+                            "transitioned-layer-protocol-name": [
+                                "DSR",
+                                "DIGITAL_OTN",
+                                "PHOTONIC_MEDIA"
+                            ],
+                            "loss-characteristic": "loss",
+                            "layer-protocol-name": [
+                                "PHOTONIC_MEDIA"
+                            ],
+                            "repeat-delivery-characteristic": "repeat delivery",
+                            "total-potential-capacity": {
+                                "total-size": {
+                                    "value": "100.0",
+                                    "unit": "tapi-common:CAPACITY_UNIT_GBPS"
+                                }
+                            },
+                            "latency-characteristic": [
+                                {
+                                    "traffic-property-name": "FIXED_LATENCY",
+                                    "queuing-latency-characteristic": "12345678",
+                                    "jitter-characteristic": "12345678",
+                                    "wander-characteristic": "12345678",
+                                    "fixed-latency-characteristic": "12345678"
+                                }
+                            ],
+                            "cost-characteristic": [
+                                {
+                                    "cost-name": "HOP_COUNT",
+                                    "cost-algorithm": "Restricted Shortest Path - RSP",
+                                    "cost-value": "12345678"
+                                }
+                            ],
+                            "direction": "BIDIRECTIONAL",
+                            "available-capacity": {
+                                "total-size": {
+                                    "value": "100.0",
+                                    "unit": "tapi-common:CAPACITY_UNIT_GBPS"
+                                }
+                            },
+                            "server-integrity-process-characteristic": "server integrity process",
+                            "operational-state": "ENABLED",
+                            "error-characteristic": "error",
+                            "validation-mechanism": [
+                                {
+                                    "validation-mechanism": "validation mechanism",
+                                    "layer-protocol-adjacency-validated": "layer protocol adjacency",
+                                    "validation-robustness": "validation robustness"
+                                }
+                            ],
+                            "administrative-state": "UNLOCKED"
+                        },
+                        {
                             "uuid": "077f9fd2-de35-3427-b582-b0a6ccc6f603",
                             "risk-characteristic": [
                                 {
@@ -23959,14 +24009,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "426dc9d5-6faf-304c-a227-49cff43ae3a2",
@@ -24046,14 +24096,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "f2883a57-cb0d-348b-8374-b9176d17f0be",
@@ -24133,14 +24183,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "631e2740-ba5e-3192-8910-af9143b780be",
@@ -24220,14 +24270,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "5dd9cecb-07c5-3c31-a500-712fd961d544",
@@ -24307,14 +24357,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "548f977f-a169-37c5-9b04-6a687fce4fd6",
@@ -24394,101 +24444,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
-                        },
-                        {
-                            "uuid": "d85eaac7-01c9-338a-89b8-adcae3e2612b",
-                            "risk-characteristic": [
-                                {
-                                    "risk-characteristic-name": "risk characteristic",
-                                    "risk-identifier-list": [
-                                        "risk identifier1",
-                                        "risk identifier2"
-                                    ]
-                                }
                             ],
-                            "node-edge-point": [
-                                {
-                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                    "node-uuid": "66a5e7d1-59dc-3458-a2c8-82e860ce095a",
-                                    "node-edge-point-uuid": "047ef6c8-e7c5-39a8-ab59-f1709a504862"
-                                },
-                                {
-                                    "topology-uuid": "393f09a4-0a0b-3d82-a4f6-1fbbc14ca1a7",
-                                    "node-uuid": "774cb0ad-b8e7-3e52-8012-05faca37b54c",
-                                    "node-edge-point-uuid": "02e5ba77-509f-3f01-b623-df4d3ec6e84a"
-                                }
-                            ],
-                            "resilience-type": {
-                                "restoration-policy": "NA",
-                                "protection-type": "NO_PROTECTION"
-                            },
-                            "delivery-order-characteristic": "delivery order",
-                            "name": [
-                                {
-                                    "value-name": "tapi-otsi-mc-rdm-rdm-linklink name",
-                                    "value": "4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-B1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10to4a38610c-b3ae-11ed-afa1-0242ac120002+ROADM_1830-PSS-A1+OTSi_MEDIA_CHANNEL+PORT-1-3-10_ADDDROP-1-3-10"
-                                }
-                            ],
-                            "unavailable-time-characteristic": "unavailable time",
-                            "lifecycle-state": "INSTALLED",
-                            "transitioned-layer-protocol-name": [
-                                "DSR",
-                                "DIGITAL_OTN",
-                                "PHOTONIC_MEDIA"
-                            ],
-                            "loss-characteristic": "loss",
-                            "layer-protocol-name": [
-                                "PHOTONIC_MEDIA"
-                            ],
-                            "repeat-delivery-characteristic": "repeat delivery",
-                            "total-potential-capacity": {
-                                "total-size": {
-                                    "value": "100.0",
-                                    "unit": "tapi-common:CAPACITY_UNIT_GBPS"
-                                }
-                            },
-                            "latency-characteristic": [
-                                {
-                                    "traffic-property-name": "FIXED_LATENCY",
-                                    "queuing-latency-characteristic": "12345678",
-                                    "jitter-characteristic": "12345678",
-                                    "wander-characteristic": "12345678",
-                                    "fixed-latency-characteristic": "12345678"
-                                }
-                            ],
-                            "cost-characteristic": [
-                                {
-                                    "cost-name": "HOP_COUNT",
-                                    "cost-algorithm": "Restricted Shortest Path - RSP",
-                                    "cost-value": "12345678"
-                                }
-                            ],
-                            "direction": "BIDIRECTIONAL",
-                            "available-capacity": {
-                                "total-size": {
-                                    "value": "100.0",
-                                    "unit": "tapi-common:CAPACITY_UNIT_GBPS"
-                                }
-                            },
-                            "server-integrity-process-characteristic": "server integrity process",
-                            "operational-state": "ENABLED",
-                            "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
-                            "validation-mechanism": [
-                                {
-                                    "validation-mechanism": "validation mechanism",
-                                    "layer-protocol-adjacency-validated": "layer protocol adjacency",
-                                    "validation-robustness": "validation robustness"
-                                }
-                            ]
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "231d2635-7f66-359f-a323-9865cc9a9d17",
@@ -24568,14 +24531,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "cf56d231-2104-3ee5-a97c-f50791eff80f",
@@ -24655,14 +24618,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "6e8e1cfd-4df8-3e9c-8856-fd84043bf144",
@@ -24742,14 +24705,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "d4c5f986-3b45-3228-8b41-f6b5ce120766",
@@ -24829,14 +24792,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "1127013d-66b0-381f-b8e3-3d290e6eac78",
@@ -24916,14 +24879,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "330bff43-4c24-32f9-8a8f-e58939d50eb8",
@@ -25003,14 +24966,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         },
                         {
                             "uuid": "092bbc18-6166-3287-b72c-0c1345ae700d",
@@ -25090,14 +25053,14 @@
                             "server-integrity-process-characteristic": "server integrity process",
                             "operational-state": "ENABLED",
                             "error-characteristic": "error",
-                            "administrative-state": "UNLOCKED",
                             "validation-mechanism": [
                                 {
                                     "validation-mechanism": "validation mechanism",
                                     "layer-protocol-adjacency-validated": "layer protocol adjacency",
                                     "validation-robustness": "validation robustness"
                                 }
-                            ]
+                            ],
+                            "administrative-state": "UNLOCKED"
                         }
                     ]
                 }
@@ -25721,11 +25684,11 @@
                 "layer-protocol-name": "PHOTONIC_MEDIA",
                 "supported-cep-layer-protocol-qualifier-instances": [
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
                         "number-of-cep-instances": "1"
                     },
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
                         "number-of-cep-instances": "1"
                     },
                     {
@@ -26415,11 +26378,11 @@
                 "layer-protocol-name": "PHOTONIC_MEDIA",
                 "supported-cep-layer-protocol-qualifier-instances": [
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
                         "number-of-cep-instances": "1"
                     },
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
                         "number-of-cep-instances": "1"
                     },
                     {
@@ -26884,11 +26847,11 @@
                 "layer-protocol-name": "PHOTONIC_MEDIA",
                 "supported-cep-layer-protocol-qualifier-instances": [
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
                         "number-of-cep-instances": "1"
                     },
                     {
-                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OTSi",
+                        "layer-protocol-qualifier": "tapi-photonic-media:PHOTONIC_LAYER_QUALIFIER_OMS",
                         "number-of-cep-instances": "1"
                     },
                     {
