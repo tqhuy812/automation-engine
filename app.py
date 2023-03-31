@@ -17,7 +17,7 @@ H_SDNC_IP = os.getenv("H_SDNC_IP", "")
 BL_ENGINE_PORT = int(os.getenv("BL_ENGINE_PORT", 5002))
 app = Flask(__name__)
 MASTER_BRANCH = "main"  # Same for both
-GITHUB_ARGOCD_TOKEN = ""
+GITHUB_ARGOCD_TOKEN = "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"
 REPO_TOPOLOGY = "tqhuy812/optical-topology"
 REPO_DEPLOYMENT = "tqhuy812/optical-control-plane"
 
@@ -97,22 +97,12 @@ def push_fully_to_repo(controller_deployment_yaml, oia_pce_deployment_yaml, oia_
     main_ref.edit(sha=commit.sha)
 
 
-def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml):
+def push_partial_to_repo(controller_deployment_yaml):
     # Create blobs for each file
-    blob1, blob2, blob3 = [
-        deployment_repo.create_git_blob(
+    blob1 = deployment_repo.create_git_blob(
             content=controller_deployment_yaml,
             encoding='utf-8',
-        ),
-        deployment_repo.create_git_blob(
-            content=ols_deployment_yaml,
-            encoding='utf-8',
-        ),
-        deployment_repo.create_git_blob(
-            content=ols_service_yaml,
-            encoding='utf-8',
         )
-    ]
 
     # Create a new tree with our blobs
     new_tree = deployment_repo.create_git_tree(
@@ -134,7 +124,7 @@ def push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_se
                 mode="100644",
                 type="blob",
                 sha=None,
-            )
+            ),
         ],
         base_tree=deployment_repo.get_git_tree(sha='main')
     )
@@ -200,7 +190,7 @@ def transform():
             if doc['kind'] == "Deployment":
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
-                    if container['name'] == "h-sdnc":
+                    if "sdnc" in container['name']:
                         container['image'] = "tqhuy812/nssr-controller-ofc2023:1.1"
                         container['name'] = "t-sdnc"
                     containers.append(container)
@@ -246,7 +236,7 @@ def transform():
             if doc['kind'] == "Deployment":
                 containers = []
                 for container in doc['spec']['template']['spec']['containers']:
-                    if container['name'] == "t-sdnc":
+                    if "sdnc" in container['name']:
                         container['image'] = "tqhuy812/hsdnc-ofc2023:1.1.0"
                         container['name'] = "h-sdnc"
                     containers.append(container)
@@ -266,6 +256,7 @@ def transform():
         # print(ols_service_yaml)
         print("------------------PUSH. NEW TREE------------------")
         # push_partial_to_repo(controller_deployment_yaml, ols_deployment_yaml, ols_service_yaml)
+        push_partial_to_repo(controller_deployment_yaml)
         # thread = Thread(target=recommissioning_partially, args=[node_list, link_list, MINIKUBE_IP, port])
         # thread.start()
     return "DONE", 200
@@ -327,7 +318,7 @@ def recommissioning_fully(node_list=None, link_list=None, ip="localhost", port="
     print("------------------MAPPING PARTIALLY TO FULLY DISAGGREGATED CONTEXT------------------")
     with open("json-templates/tapi_t1_topo.json", "r") as stream:
         tapi_context = json.load(stream)  # TODO: we should send the string format version
-    print(tapi_context)
+    print(json.dumps(tapi_context))
     tapi_put_context_request(tapi_context)
     print("------------------MAPPING DONE------------------")
     print("------------------JOB COMPLETED------------------")
@@ -420,7 +411,7 @@ def tapi_put_context_request(context):
     url = "{}/operations/transportpce-tapinetworkutils:put-tapi-context"
     data = {
         "input": {
-            "tapi-context-file": context
+            "tapi-context-file": json.dumps(context)
         }
     }
     return post_request(url, data)
